@@ -37,6 +37,9 @@ cc_library(
     name = "core-lib",
     srcs = ["src/cxx.cc"],
     hdrs = ["include/cxx.h"],
+    include_prefix = "rust",
+    strip_include_prefix = "include",
+    visibility = ["//visibility:public"],
 )
 
 rust_proc_macro(
